@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://build.shibboleth.net/maven/releases/"
+    }
+}
+
+dependencies {
+    compileOnly 'org.apache.tomee.bom:tomee-plus:9.1.0'
+
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.apache.tomee.bom:tomee-plus:9.1.0'
+}
+
